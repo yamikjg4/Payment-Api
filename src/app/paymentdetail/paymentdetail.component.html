@@ -1,0 +1,33 @@
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Payment Registration</h1>
+
+</div>
+<div class="row">
+    <div class="col-md-5 col-6">
+        <app-payment-form-detail></app-payment-form-detail>
+    </div>
+    <div class="col-md-7 col-6">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <!-- <th>paymentid</th> -->
+                    <th>cardownername</th>
+                    <th>cardnumber</th>
+                    <th>Expiredate</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of service.list">
+                        <!-- <td (click)="populated(item)">{{item.paymentid}}</td> -->
+                        <td (click)="populated(item)">{{item.cardownername}}</td>
+                        <td (click)="populated(item)">{{item.cardnumber}}</td>
+                        <td (click)="populated(item)">{{item.Expiredate}}</td>
+                        <td><i class="fa fa-trash mx-2" aria-hidden="true" (click)="ondelete(item.paymentid)"></i>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
